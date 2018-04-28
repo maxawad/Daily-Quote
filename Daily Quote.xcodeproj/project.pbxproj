@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961D0152B5AE046F6609F843 /* Pods_Daily_Quote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */; };
 		A74EB38820923E13003D00FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74EB38720923E13003D00FB /* AppDelegate.swift */; };
 		A74EB38A20923E13003D00FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74EB38920923E13003D00FB /* ViewController.swift */; };
 		A74EB38D20923E13003D00FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74EB38B20923E13003D00FB /* Main.storyboard */; };
-		A74EB38F20923E18003D00FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A74EB38E20923E18003D00FB /* Assets.xcassets */; };
 		A74EB39220923E18003D00FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74EB39020923E18003D00FB /* LaunchScreen.storyboard */; };
+		A74EB39B209282D8003D00FB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A74EB399209282D8003D00FB /* Model.xcdatamodeld */; };
+		A7D8D1662092A0AC00EEBEBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D8D1652092A0AC00EEBEBC /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1677C782395477462D63FFFA /* Pods-Daily Quote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Quote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote.release.xcconfig"; sourceTree = "<group>"; };
+		728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Quote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74EB38420923E13003D00FB /* Daily Quote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Quote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74EB38720923E13003D00FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74EB38920923E13003D00FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A74EB38C20923E13003D00FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A74EB38E20923E18003D00FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A74EB39120923E18003D00FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A74EB39320923E18003D00FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A74EB39A209282D8003D00FB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A7D8D1652092A0AC00EEBEBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B76D56D163E171210509AF40 /* Pods-Daily Quote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Quote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961D0152B5AE046F6609F843 /* Pods_Daily_Quote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0C482A75E8CF1FBB2FD156 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A74EB37B20923E12003D00FB = {
 			isa = PBXGroup;
 			children = (
+				A74EB399209282D8003D00FB /* Model.xcdatamodeld */,
 				A74EB38620923E13003D00FB /* Daily Quote */,
 				A74EB38520923E13003D00FB /* Products */,
+				DED1E44F62EAD10B0BFC4D2F /* Pods */,
+				0C0C482A75E8CF1FBB2FD156 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,11 +75,20 @@
 				A74EB38720923E13003D00FB /* AppDelegate.swift */,
 				A74EB38920923E13003D00FB /* ViewController.swift */,
 				A74EB38B20923E13003D00FB /* Main.storyboard */,
-				A74EB38E20923E18003D00FB /* Assets.xcassets */,
 				A74EB39020923E18003D00FB /* LaunchScreen.storyboard */,
 				A74EB39320923E18003D00FB /* Info.plist */,
+				A7D8D1652092A0AC00EEBEBC /* Images.xcassets */,
 			);
 			path = "Daily Quote";
+			sourceTree = "<group>";
+		};
+		DED1E44F62EAD10B0BFC4D2F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B76D56D163E171210509AF40 /* Pods-Daily Quote.debug.xcconfig */,
+				1677C782395477462D63FFFA /* Pods-Daily Quote.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A74EB39620923E18003D00FB /* Build configuration list for PBXNativeTarget "Daily Quote" */;
 			buildPhases = (
+				CA1FD81730F576C10969621D /* [CP] Check Pods Manifest.lock */,
 				A74EB38020923E13003D00FB /* Sources */,
 				A74EB38120923E13003D00FB /* Frameworks */,
 				A74EB38220923E13003D00FB /* Resources */,
+				B948E8CAE6B864DA66860467 /* [CP] Embed Pods Frameworks */,
+				B6255B00C23323EDC7B54CAA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +126,11 @@
 				TargetAttributes = {
 					A74EB38320923E13003D00FB = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -123,12 +158,66 @@
 			buildActionMask = 2147483647;
 			files = (
 				A74EB39220923E18003D00FB /* LaunchScreen.storyboard in Resources */,
-				A74EB38F20923E18003D00FB /* Assets.xcassets in Resources */,
+				A7D8D1662092A0AC00EEBEBC /* Images.xcassets in Resources */,
 				A74EB38D20923E13003D00FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B6255B00C23323EDC7B54CAA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B948E8CAE6B864DA66860467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA1FD81730F576C10969621D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Daily Quote-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A74EB38020923E13003D00FB /* Sources */ = {
@@ -137,6 +226,7 @@
 			files = (
 				A74EB38A20923E13003D00FB /* ViewController.swift in Sources */,
 				A74EB38820923E13003D00FB /* AppDelegate.swift in Sources */,
+				A74EB39B209282D8003D00FB /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,11 +368,13 @@
 		};
 		A74EB39720923E18003D00FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B76D56D163E171210509AF40 /* Pods-Daily Quote.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J497DX6ZF8;
 				INFOPLIST_FILE = "Daily Quote/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,11 +388,13 @@
 		};
 		A74EB39820923E18003D00FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1677C782395477462D63FFFA /* Pods-Daily Quote.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J497DX6ZF8;
 				INFOPLIST_FILE = "Daily Quote/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,6 +428,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A74EB399209282D8003D00FB /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A74EB39A209282D8003D00FB /* Model.xcdatamodel */,
+			);
+			currentVersion = A74EB39A209282D8003D00FB /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A74EB37C20923E13003D00FB /* Project object */;
 }
