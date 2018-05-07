@@ -104,6 +104,16 @@
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="LPr-dg-lio">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg4-va-R5M">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="dismissButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCD-Bw-zD8"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                             </view>
                                             <vibrancyEffect>
                                                 <blurEffect style="light"/>
@@ -177,12 +187,12 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple will ask you to accept the App Store suscription terms and request permission to provide your information to Daily Quote." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hca-9Q-bfA">
-                            <rect key="frame" x="15" y="112" width="254" height="77"/>
+                            <rect key="frame" x="15" y="112" width="254" height="76.5"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By starting the free trial, you reaffirm your acceptance of Daily Quote's Terms of Use and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-Ah-EhT">
-                            <rect key="frame" x="15" y="214" width="254" height="76"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For more information, please visit Daily Quote's Terms of Use and Privacy Policy." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-Ah-EhT">
+                            <rect key="frame" x="15" y="213.5" width="254" height="57.5"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -191,11 +201,11 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="E4X-pe-G4l"/>
                             </constraints>
-                            <state key="normal" title="Close">
+                            <state key="normal" title="IAP Button">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="closeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cN3-dH-wgb"/>
+                                <action selector="IAPButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YgG-l4-YyN"/>
                             </connections>
                         </button>
                     </subviews>
@@ -269,7 +279,7 @@
                     <viewLayoutGuide key="safeArea" id="qAG-X8-YZK"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2" y="45"/>
+            <point key="canvasLocation" x="0.80000000000000004" y="44.527736131934034"/>
         </scene>
     </scenes>
     <resources>

@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let newData = fetchQuotes() {
             saveFetchedQuotes(feed: newData)
+            scheduleNotification(quote: rtnFirst(feed: newData), date: rtnDate())
             completionHandler(.newData)
         }
         completionHandler(.noData)
@@ -149,7 +150,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         quoting = String(quoting.dropLast())
         quoting = String(quoting.dropFirst())
         let quote: String = quoting
-        let rtnFirstQuote = [quote, author]
         
     
         newQuote.setValue(quote, forKey: "lastQuote")
@@ -161,6 +161,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             print("Failed saving")
         }
+        
+    }
+    func rtnFirst(feed: RSSFeed) -> String{
+        let item = feed.items?[0]
+        let author:String = (item!.title)!
+        var quoting = (item!.description)!
+        quoting = String(quoting.dropLast())
+        quoting = String(quoting.dropFirst())
+        let quote: String = quoting
+        
+        return quote + "\n - " + author
+    }
+    func rtnDate() -> Date{
+        let context = persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedDate")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            let lastDate =  (result as! [NSManagedObject]).last
+            
+            if (lastDate?.value(forKey: "date") != nil){
+                print("rtned save Date")
+                return lastDate?.value(forKey: "date") as! Date
+                }
+            
+        } catch {
+            
+            print("Failed")
+        }
+        print("rtned Date()")
+        return Date()
+    }
+    func saveDate(date: Date) {
+        let context = persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "SavedDates", in: context)
+        let newDate = NSManagedObject(entity: entity!, insertInto: context)
+        newDate.setValue(date, forKey: "date")
+        do {
+            try context.save()
+            print("Saved Date")
+        } catch {
+            print("Failed saving")
+        }
+
         
     }
     

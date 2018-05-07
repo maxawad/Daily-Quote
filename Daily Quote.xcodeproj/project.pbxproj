@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		961D0152B5AE046F6609F843 /* Pods_Daily_Quote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */; };
+		A74664A1209BA278002EB19A /* IAPhandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74664A0209BA278002EB19A /* IAPhandler.swift */; };
 		A74EB38820923E13003D00FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74EB38720923E13003D00FB /* AppDelegate.swift */; };
 		A74EB38A20923E13003D00FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74EB38920923E13003D00FB /* ViewController.swift */; };
 		A74EB38D20923E13003D00FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74EB38B20923E13003D00FB /* Main.storyboard */; };
 		A74EB39220923E18003D00FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74EB39020923E18003D00FB /* LaunchScreen.storyboard */; };
 		A74EB39B209282D8003D00FB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A74EB399209282D8003D00FB /* Model.xcdatamodeld */; };
+		A76199B320A0F0E5000B63E7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76199B220A0F0E4000B63E7 /* StoreKit.framework */; };
 		A7D8D1662092A0AC00EEBEBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D8D1652092A0AC00EEBEBC /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1677C782395477462D63FFFA /* Pods-Daily Quote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Quote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote.release.xcconfig"; sourceTree = "<group>"; };
 		728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Quote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A74664A0209BA278002EB19A /* IAPhandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPhandler.swift; sourceTree = "<group>"; };
 		A74EB38420923E13003D00FB /* Daily Quote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Quote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74EB38720923E13003D00FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74EB38920923E13003D00FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		A74EB39120923E18003D00FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A74EB39320923E18003D00FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A74EB39A209282D8003D00FB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A76199B220A0F0E4000B63E7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A7D8D1652092A0AC00EEBEBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B76D56D163E171210509AF40 /* Pods-Daily Quote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Quote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,6 +40,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				961D0152B5AE046F6609F843 /* Pods_Daily_Quote.framework in Frameworks */,
+				A76199B320A0F0E5000B63E7 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +50,7 @@
 		0C0C482A75E8CF1FBB2FD156 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A76199B220A0F0E4000B63E7 /* StoreKit.framework */,
 				728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */,
 			);
 			name = Frameworks;
@@ -53,6 +59,7 @@
 		A74EB37B20923E12003D00FB = {
 			isa = PBXGroup;
 			children = (
+				A74664A0209BA278002EB19A /* IAPhandler.swift */,
 				A74EB399209282D8003D00FB /* Model.xcdatamodeld */,
 				A74EB38620923E13003D00FB /* Daily Quote */,
 				A74EB38520923E13003D00FB /* Products */,
@@ -128,6 +135,9 @@
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
 						};
@@ -227,6 +237,7 @@
 				A74EB38A20923E13003D00FB /* ViewController.swift in Sources */,
 				A74EB38820923E13003D00FB /* AppDelegate.swift in Sources */,
 				A74EB39B209282D8003D00FB /* Model.xcdatamodeld in Sources */,
+				A74664A1209BA278002EB19A /* IAPhandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

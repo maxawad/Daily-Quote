@@ -11,6 +11,7 @@ import CoreData
 import FeedKit
 import UserNotifications
 
+
 class ViewController: UIViewController {
 
     // MARK: - Outlets
@@ -44,7 +45,18 @@ class ViewController: UIViewController {
     
     @IBAction func NextButton(_ sender: Any) {
         
-        rotateQuote()
+        if feed != nil{
+                    rotateQuote()
+        } else {
+            let alert = UIAlertController(title: "No internet!", message: "Cannot establish a connection to the internet.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { action in
+                print("destructive")
+                
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+        
+        
         UIView.animate(withDuration: 1.25, delay: 0.3, animations: {
             self.NextButtonOutlet.alpha = 0
         })
@@ -52,7 +64,7 @@ class ViewController: UIViewController {
     
     @IBAction func ShareButton(_ sender: Any) {
         DispatchQueue.main.async {
-            let activityVC = UIActivityViewController(activityItems: [self.quoteText.text,self.quoteAuthor.text], applicationActivities: nil)
+            let activityVC = UIActivityViewController(activityItems: ["\"" + self.quoteText.text! + "\"", "\n- " + self.quoteAuthor.text!], applicationActivities: nil)
         
             self.present(activityVC, animated: true, completion: nil)
         }
@@ -68,14 +80,22 @@ class ViewController: UIViewController {
     
     @IBAction func doneButton(_ sender: Any) {
         animateOut()
-        appDelegate.scheduleNotification(quote: self.quoteText.text!, date: TimePickerOutlet.date)
+        let rtnString = self.quoteText.text! + "\n - " + self.quoteAuthor.text!
+        appDelegate.saveDate(date: TimePickerOutlet.date)
+        appDelegate.scheduleNotification(quote: rtnString, date: TimePickerOutlet.date)
     }
     
-    @IBAction func closeButton(_ sender: Any) {
+    @IBAction func dismissButton(_ sender: Any) {
+        animateOut()
         animateOut2()
     }
+    @IBAction func IAPButton() {
+        IAPHandler.shared.purchaseMyProduct(index: 0)
+        print("notworking")
+    }
     
     
+    // MARK: - View Controller Functions
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -88,8 +108,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Spoofify()
         
+        // In-App Purchase Handler
+        
+        IAPHandler.shared.fetchAvailableProducts()
+        IAPHandler.shared.purchaseStatusBlock = {[weak self] (type) in
+            guard let strongSelf = self else{ return }
+            if type == .purchased {
+                let alertView = UIAlertController(title: "", message: type.message(), preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
+                    
+                })
+                alertView.addAction(action)
+                strongSelf.present(alertView, animated: true, completion: nil)
+            }
+        }
+        
+        
+        Spoofify() // Stylizes all squares
+        askNotificationPermissions()
         getQuotes()
         
     }
@@ -126,24 +163,25 @@ class ViewController: UIViewController {
     
     
     func rotateQuote(){
-        let item = self.feed?.items?[count]
-        let author:String = (item!.title)!
-        var quoting = (item!.description)!
-        quoting = String(quoting.characters.dropLast())
-        quoting = String(quoting.characters.dropFirst())
-        let quote: String = quoting
-        DispatchQueue.main.async {
-            // ..and update the UI
-            self.quoteText.text = quote
-            self.quoteAuthor.text = author
-        }
-        if (count == 0){bgImageView.image = #imageLiteral(resourceName: "bg0")}
-        if (count == 1){bgImageView.image = #imageLiteral(resourceName: "bg1")}
-        if (count == 2){bgImageView.image = #imageLiteral(resourceName: "bg2")}
-        if (count == 3){bgImageView.image = #imageLiteral(resourceName: "bg3")
-            count = -1
-        }
-        count = (count + 1)
+            let item = self.feed?.items?[count]
+            let author:String = (item!.title)!
+            var quoting = (item!.description)!
+            quoting = String(quoting.dropLast())
+            quoting = String(quoting.dropFirst())
+            let quote: String = quoting
+            DispatchQueue.main.async {
+                // ..and update the UI
+                self.quoteText.text = quote
+                self.quoteAuthor.text = author
+            }
+            if (count == 0){bgImageView.image = #imageLiteral(resourceName: "bg0")}
+            if (count == 1){bgImageView.image = #imageLiteral(resourceName: "bg1")}
+            if (count == 2){bgImageView.image = #imageLiteral(resourceName: "bg2")}
+            if (count == 3){bgImageView.image = #imageLiteral(resourceName: "bg3")
+                count = -1
+            }
+            count = (count + 1)
+
     }
     
     
@@ -173,7 +211,7 @@ class ViewController: UIViewController {
     func circleButton2(){
         let borderAlpha : CGFloat = 0.7
         doneButtonOutlet.frame = CGRect(x: 100,y: 100,width: 200,height: 40)
-        doneButtonOutlet.setTitle("DONE", for: .normal)
+        doneButtonOutlet.setTitle("SET", for: .normal)
         doneButtonOutlet.setTitleColor(UIColor.black, for: .normal)
         doneButtonOutlet.backgroundColor = UIColor.clear
         doneButtonOutlet.layer.borderWidth = 1.5
@@ -286,13 +324,29 @@ class ViewController: UIViewController {
             let lastQuoteAndAuthor =  (result as! [NSManagedObject]).last
 
             if (lastQuoteAndAuthor?.value(forKey: "lastAuthor") != nil){
-                quoteText.text = lastQuoteAndAuthor?.value(forKey: "lastQuote") as! String
-                quoteAuthor.text = lastQuoteAndAuthor?.value(forKey: "lastAuthor") as! String
+                quoteText.text = (lastQuoteAndAuthor?.value(forKey: "lastQuote") as! String)
+                quoteAuthor.text = (lastQuoteAndAuthor?.value(forKey: "lastAuthor") as! String)
             }
         } catch {
             
-            print("Failed")
+            print("Failed displayLastQuote()")
         }
+    }
+    
+    func requestLastSavedQuotes() -> NSManagedObject? {
+        let context = appDelegate.persistentContainer.viewContext
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedQuotes")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try context.fetch(request)
+            let lastQuoteAndAuthor =  (result as! [NSManagedObject]).last
+            return lastQuoteAndAuthor!
+        } catch {
+            
+            print("Failed requestLastSavedQuotes()")
+            
+        }
+        return nil
     }
 }
 
