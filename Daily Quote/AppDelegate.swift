@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import UserNotifications
 import FeedKit
+import StoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

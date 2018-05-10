@@ -10,9 +10,12 @@ import UIKit
 import CoreData
 import FeedKit
 import UserNotifications
+import StoreKit
 
 
 class ViewController: UIViewController {
+
+    
 
     // MARK: - Outlets
     
@@ -31,7 +34,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var closeButtonOutlet: UIButton!
     @IBOutlet weak var visualEffectTime: UIVisualEffectView!
     @IBOutlet weak var visualEffectInApp: UIVisualEffectView!
-    
+    @IBOutlet weak var RestoreButtonOutlet: UIButton!
     
     
     // MARK: - Actions
@@ -89,9 +92,11 @@ class ViewController: UIViewController {
         animateOut()
         animateOut2()
     }
-    @IBAction func IAPButton() {
-        IAPHandler.shared.purchaseMyProduct(index: 0)
-        print("notworking")
+    @IBAction func IAPButton(_ sender: Any) {
+        IAPService.shared.purchase(product: .autoRenewing)
+    }
+    @IBAction func IAPRestore(_ sender: Any) {
+        IAPService.shared.restorePurchases()
     }
     
     
@@ -108,21 +113,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        IAPService.shared.getProducts()
         
-        // In-App Purchase Handler
-        
-        IAPHandler.shared.fetchAvailableProducts()
-        IAPHandler.shared.purchaseStatusBlock = {[weak self] (type) in
-            guard let strongSelf = self else{ return }
-            if type == .purchased {
-                let alertView = UIAlertController(title: "", message: type.message(), preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: { (alert) in
-                    
-                })
-                alertView.addAction(action)
-                strongSelf.present(alertView, animated: true, completion: nil)
-            }
-        }
         
         
         Spoofify() // Stylizes all squares
@@ -283,6 +275,13 @@ class ViewController: UIViewController {
     }
     
     func Spoofify() {
+        let yourAttributes : [NSAttributedStringKey: Any] = [
+            NSAttributedStringKey.font : UIFont.systemFont(ofSize: 12),
+            NSAttributedStringKey.foregroundColor : UIColor.black,
+            NSAttributedStringKey.underlineStyle : NSUnderlineStyle.styleSingle.rawValue]
+        let attributeString = NSMutableAttributedString(string: "Restore Membership", attributes: yourAttributes)
+        RestoreButtonOutlet.setAttributedTitle(attributeString, for: .normal)
+
         
         self.quoteText.alpha = 0
         self.quoteAuthor.alpha = 0
@@ -290,7 +289,6 @@ class ViewController: UIViewController {
         self.shareButtonOutlet.alpha = 0
         self.gearButtonOutlet.alpha = 0
         self.alarmButtonOutlet.alpha = 0
-        
         visualEffectInApp.layer.cornerRadius = 10;
         visualEffectTime.layer.cornerRadius = 10
         visualEffectTime.clipsToBounds = true
@@ -348,5 +346,6 @@ class ViewController: UIViewController {
         }
         return nil
     }
+    
 }
 

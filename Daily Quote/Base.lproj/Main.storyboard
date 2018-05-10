@@ -20,24 +20,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg-1" translatesAutoresizingMaskIntoConstraints="NO" id="Klz-qW-gv0">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="Klz-qW-gv0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love is around the corner. You never know!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ier-xP-dsu">
-                                <rect key="frame" x="80" y="100" width="215" height="79"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dream Big." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ier-xP-dsu">
+                                <rect key="frame" x="80" y="100" width="215" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max Awad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-6e-E1h">
-                                <rect key="frame" x="80" y="199" width="215" height="16"/>
+                                <rect key="frame" x="80" y="146.5" width="215" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qB7-a0-K7P" userLabel="Screen Button">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <action selector="ScreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOq-N2-MJt"/>
                                 </connections>
@@ -105,10 +105,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg4-va-R5M">
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg4-va-R5M" userLabel="Dismiss Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <state key="normal" title="Button"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <connections>
                                                             <action selector="dismissButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCD-Bw-zD8"/>
                                                         </connections>
@@ -151,6 +150,7 @@
                     </view>
                     <connections>
                         <outlet property="NextButtonOutlet" destination="f5C-WN-Kjq" id="YIH-to-50Y"/>
+                        <outlet property="RestoreButtonOutlet" destination="Us8-h1-tMO" id="TDA-TG-e2X"/>
                         <outlet property="TimePickerOutlet" destination="oUb-of-9CM" id="Yk5-cc-oVR"/>
                         <outlet property="TimePickerViewOutlet" destination="xAu-bF-CSw" id="pNd-Wv-a9f"/>
                         <outlet property="alarmButtonOutlet" destination="Qsf-9c-T1P" id="cgw-GG-msp"/>
@@ -178,6 +178,22 @@
                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="qSt-XT-W2i">
                                 <rect key="frame" x="0.0" y="0.0" width="284" height="450"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Us8-h1-tMO">
+                                        <rect key="frame" x="70" y="419" width="146" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Us8-h1-tMO" secondAttribute="height" multiplier="73:15" id="Rv4-Uu-vgr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <state key="normal" title="Restore membership">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Us8-h1-tMO" secondAttribute="bottom" constant="1" id="I77-HZ-Wva"/>
+                                    <constraint firstItem="Us8-h1-tMO" firstAttribute="centerX" secondItem="qSt-XT-W2i" secondAttribute="centerX" id="n4c-Et-Vkw"/>
+                                </constraints>
                             </view>
                             <blurEffect style="light"/>
                         </visualEffectView>
@@ -196,7 +212,7 @@
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whv-a8-6Ep">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whv-a8-6Ep" userLabel="IAP Button Outlet">
                             <rect key="frame" x="30" y="370" width="224" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="E4X-pe-G4l"/>
@@ -205,7 +221,8 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                             <connections>
-                                <action selector="IAPButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YgG-l4-YyN"/>
+                                <action selector="IAPButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hvt-bm-owU"/>
+                                <action selector="IAPRestore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aex-uz-FLp"/>
                             </connections>
                         </button>
                     </subviews>
@@ -284,7 +301,7 @@
     </scenes>
     <resources>
         <image name="alarm-clock" width="128" height="128"/>
-        <image name="bg-1" width="2971" height="3961"/>
+        <image name="bg3" width="4672" height="3104"/>
         <image name="gears" width="128" height="128"/>
         <image name="next arrow" width="82" height="300"/>
     </resources>
