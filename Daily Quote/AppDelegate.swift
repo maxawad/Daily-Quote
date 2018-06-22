@@ -130,7 +130,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Parse asynchronously, not to block the UI.
         parser?.parseAsync(queue: DispatchQueue.global(qos: .userInitiated)) { (result) in
             // Do your thing, then back to the Main thread
-            return result.rssFeed
+            return
         }
         return parser?.parse().rssFeed
     }
