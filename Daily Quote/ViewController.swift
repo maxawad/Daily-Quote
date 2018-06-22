@@ -69,7 +69,6 @@ class ViewController: UIViewController {
             } else {
                 let alert = UIAlertController(title: "No internet!", message: "Cannot establish a connection to the internet.", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { action in
-                    print("destructive")
                     
                 }))
                 self.present(alert, animated: true, completion: nil)
@@ -92,20 +91,7 @@ class ViewController: UIViewController {
     @IBAction func alarmButton(_ sender: Any) {
         animateIn(uiview: TimePickerViewOutlet)
     }
-    
-//    @IBAction func NextButton(_ sender: Any) {
-//
-//        if feed != nil{
-//                    rotateQuote()
-//        } else {
-//            let alert = UIAlertController(title: "No internet!", message: "Cannot establish a connection to the internet.", preferredStyle: UIAlertControllerStyle.alert)
-//            alert.addAction(UIAlertAction(title: "Dismiss", style: .destructive, handler: { action in
-//                print("destructive")
-//
-//            }))
-//            self.present(alert, animated: true, completion: nil)
-//        }
-//    }
+
     
     @IBAction func ShareButton(_ sender: Any) {
         DispatchQueue.main.async {
