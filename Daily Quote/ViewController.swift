@@ -11,11 +11,14 @@ import CoreData
 import FeedKit
 import UserNotifications
 import StoreKit
+import Lottie
+import AVFoundation
 
 
 class ViewController: UIViewController {
 
-    
+
+
 
     // MARK: - Outlets
     
@@ -38,6 +41,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var visualEffectInApp: UIVisualEffectView!
     @IBOutlet weak var RestoreButtonOutlet: UIButton!
     
+    @IBOutlet weak var screenButtonOutlet: UIButton!
     @IBOutlet var NewView: UIView!
     @IBOutlet weak var newButtonOutlet: UIButton!
     @IBOutlet weak var newVisualOutlet: UIVisualEffectView!
@@ -82,6 +86,7 @@ class ViewController: UIViewController {
     
     @IBAction func dismissWelcome(_ sender: Any) {
         animateOut(uiview: NewView)
+        screenButtonOutlet.isHidden = false
         
     }
     
@@ -113,6 +118,7 @@ class ViewController: UIViewController {
         self.shareButtonOutlet.alpha = 1.0
         self.gearButtonOutlet.alpha = 1.0
         self.alarmButtonOutlet.alpha = 1.0
+
     }
     
     @IBAction func doneButton(_ sender: Any) {
@@ -120,10 +126,10 @@ class ViewController: UIViewController {
         let rtnString = self.quoteText.text! + "\n - " + self.quoteAuthor.text!
         appDelegate.saveDate(date: TimePickerOutlet.date)
         appDelegate.scheduleNotification(quote: rtnString, date: TimePickerOutlet.date)
+
     }
     
     @IBAction func dismissButton(_ sender: Any) {
-        animateOut(uiview: self.NewView)
         animateOut(uiview: self.TimePickerViewOutlet)
         animateOut(uiview: self.inAppViewOutlet)
     }
@@ -148,6 +154,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         UserDefaults.standard.set(false, forKey: "showedWelcome")
         
         
@@ -169,6 +176,7 @@ class ViewController: UIViewController {
         animateInFrame(uiview: NewView)
         isFirstTime()
         addSwipeHandler()
+        setupGif()
     }
     
 
@@ -339,7 +347,6 @@ class ViewController: UIViewController {
             uiview.alpha = 0
             
             self.visualEffectView.effect = nil
-            
         })
         visualEffectView.isHidden = true
 
@@ -411,6 +418,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // asignates last saved quote
     func requestLastSavedQuotes() -> NSManagedObject? {
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "SavedQuotes")
@@ -432,9 +440,36 @@ class ViewController: UIViewController {
         
         } else {
             self.animateIn(uiview: NewView)
+//            setupLottie()
+//            Checks if welcome screen has been set
 //            UserDefaults.standard.set(true, forKey: "showedWelcome")
         }
     }
+
+//    // MARK: - Lottie Implementation
+//
+//    var animationView: LOTAnimationView = LOTAnimationView(name: "data");
+//
+//
+//    func setupLottie() {
+//        screenButtonOutlet.isHidden = true
+//        // Setup our animation view size
+//        animationView.contentMode = .scaleAspectFit
+//        animationView.frame = CGRect(x: 20, y: 20, width: NewView.frame.width-40, height: NewView.frame.height/2.5)
+//
+//        NewView.addSubview(animationView)
+//
+//        animationView.loopAnimation = true
+//
+//        animationView.play(fromProgress: 0.05, toProgress: 0.95, withCompletion: nil)
+//    }
+    
+    func setupGif() {
+        screenButtonOutlet.isHidden = true
+        
+        ImageViewOutlet.loadGif(asset: "intro")
+    }
+    @IBOutlet weak var ImageViewOutlet: UIImageView!
     
 }
 

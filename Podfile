@@ -5,6 +5,8 @@ target 'Daily Quote' do
 
   # Pods for Daily Quote
   pod 'FeedKit', '~> 6.0'
+  pod 'lottie-ios'
+  pod 'SwiftGifOrigin', '~> 1.6.1'
     
 
 end

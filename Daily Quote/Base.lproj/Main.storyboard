@@ -147,6 +147,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ImageViewOutlet" destination="uGG-VI-fkh" id="dk7-3Q-8x5"/>
                         <outlet property="NewView" destination="6M4-Jd-Wwh" id="TPD-bn-KbT"/>
                         <outlet property="RestoreButtonOutlet" destination="Us8-h1-tMO" id="TDA-TG-e2X"/>
                         <outlet property="TimePickerOutlet" destination="oUb-of-9CM" id="Yk5-cc-oVR"/>
@@ -162,6 +163,7 @@
                         <outlet property="popoverOutlet" destination="gq3-0F-Uqu" id="Gtd-qV-tGW"/>
                         <outlet property="quoteAuthor" destination="2dS-6e-E1h" id="RZ1-2S-uwJ"/>
                         <outlet property="quoteText" destination="ier-xP-dsu" id="qZH-vt-qKA"/>
+                        <outlet property="screenButtonOutlet" destination="qB7-a0-K7P" id="75i-lf-eee"/>
                         <outlet property="shareButtonOutlet" destination="l8r-Wj-Sse" id="PyX-rx-tmk"/>
                         <outlet property="visualEffectInApp" destination="PrH-VI-lEd" id="RAz-Kn-ZYb"/>
                         <outlet property="visualEffectTime" destination="lln-rZ-Ifo" id="o3l-4A-Lij"/>
@@ -170,27 +172,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="6M4-Jd-Wwh">
-                    <rect key="frame" x="0.0" y="0.0" width="270" height="357"/>
+                    <rect key="frame" x="0.0" y="0.0" width="270" height="478"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGx-28-c0k">
-                            <rect key="frame" x="0.0" y="0.0" width="270" height="357"/>
+                            <rect key="frame" x="0.0" y="0.0" width="270" height="478"/>
                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="I9F-dm-9b5">
-                                <rect key="frame" x="0.0" y="0.0" width="270" height="357"/>
+                                <rect key="frame" x="0.0" y="0.0" width="270" height="478"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </view>
                             <blurEffect style="light"/>
                         </visualEffectView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeF-LG-zHI">
-                            <rect key="frame" x="30" y="97.000000000000014" width="210" height="162.33333333333337"/>
+                            <rect key="frame" x="30" y="218.66666666666663" width="210" height="162.33333333333337"/>
                             <string key="text">A daily dose of inspiration and confidence.
 
 Enjoy the enerifying quote of the day. Additionaly, set a notification time to keep updated with the quote of the day.</string>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                             <nil key="highlightedColor"/>
+                            <string key="userLabel">A daily dose of inspiration and confidence.  Enjoy the enerifying quote of the day. Additionaly, set a notification time to keep updated with the quote of the day.</string>
                         </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uGG-VI-fkh">
+                            <rect key="frame" x="20" y="24" width="230" height="169.66666666666666"/>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJD-fF-j4Y">
-                            <rect key="frame" x="45" y="280" width="180" height="50"/>
+                            <rect key="frame" x="45" y="401" width="180" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="UxC-Su-am6"/>
                             </constraints>
@@ -208,9 +214,14 @@ Enjoy the enerifying quote of the day. Additionaly, set a notification time to k
                         <constraint firstItem="WJD-fF-j4Y" firstAttribute="top" secondItem="qeF-LG-zHI" secondAttribute="bottom" constant="20" id="CWx-Vt-Ynf"/>
                         <constraint firstItem="qeF-LG-zHI" firstAttribute="leading" secondItem="1fp-IR-Cg4" secondAttribute="leading" constant="30" id="Dl3-8L-tVu"/>
                         <constraint firstItem="HGx-28-c0k" firstAttribute="leading" secondItem="1fp-IR-Cg4" secondAttribute="leading" id="H3z-LA-Itg"/>
+                        <constraint firstItem="qeF-LG-zHI" firstAttribute="top" secondItem="uGG-VI-fkh" secondAttribute="bottom" constant="25" id="Mdp-KN-ju9"/>
+                        <constraint firstItem="uGG-VI-fkh" firstAttribute="top" secondItem="6M4-Jd-Wwh" secondAttribute="top" constant="24" id="U9Y-9C-hst"/>
                         <constraint firstAttribute="bottom" secondItem="WJD-fF-j4Y" secondAttribute="bottom" constant="27" id="YM9-Xv-tcg"/>
                         <constraint firstItem="WJD-fF-j4Y" firstAttribute="leading" secondItem="1fp-IR-Cg4" secondAttribute="leading" constant="45" id="cLC-OE-mFX"/>
                         <constraint firstItem="WJD-fF-j4Y" firstAttribute="centerX" secondItem="1fp-IR-Cg4" secondAttribute="centerX" id="kN4-tr-roX"/>
+                        <constraint firstItem="HGx-28-c0k" firstAttribute="top" secondItem="6M4-Jd-Wwh" secondAttribute="top" id="keE-sw-P5f"/>
+                        <constraint firstItem="uGG-VI-fkh" firstAttribute="leading" secondItem="1fp-IR-Cg4" secondAttribute="leading" constant="20" id="qbX-Si-LYO"/>
+                        <constraint firstItem="1fp-IR-Cg4" firstAttribute="trailing" secondItem="uGG-VI-fkh" secondAttribute="trailing" constant="20" id="ydJ-Rw-bxY"/>
                         <constraint firstItem="1fp-IR-Cg4" firstAttribute="trailing" secondItem="qeF-LG-zHI" secondAttribute="trailing" constant="30" id="zyi-qF-pQB"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="1fp-IR-Cg4"/>
@@ -318,7 +329,7 @@ Enjoy the enerifying quote of the day. Additionaly, set a notification time to k
                             </connections>
                         </button>
                         <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oUb-of-9CM">
-                            <rect key="frame" x="22" y="69" width="241" height="122"/>
+                            <rect key="frame" x="21.666666666666657" y="69" width="240.99999999999997" height="122"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="241" id="Exs-JG-k2O"/>
                                 <constraint firstAttribute="height" constant="122" id="wYY-cc-FDV"/>

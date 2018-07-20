@@ -8,6 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		961D0152B5AE046F6609F843 /* Pods_Daily_Quote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */; };
+		A728769B20E5143900B735EF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A728769920E5143900B735EF /* Interface.storyboard */; };
+		A728769D20E5143E00B735EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A728769C20E5143E00B735EF /* Assets.xcassets */; };
+		A72876A420E5143E00B735EF /* Daily Quote Watchkit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A72876A320E5143E00B735EF /* Daily Quote Watchkit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A72876A920E5143E00B735EF /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72876A820E5143E00B735EF /* InterfaceController.swift */; };
+		A72876AB20E5143E00B735EF /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72876AA20E5143E00B735EF /* ExtensionDelegate.swift */; };
+		A72876AD20E5143F00B735EF /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72876AC20E5143E00B735EF /* NotificationController.swift */; };
+		A72876AF20E5143F00B735EF /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72876AE20E5143F00B735EF /* ComplicationController.swift */; };
+		A72876B120E5143F00B735EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A72876B020E5143F00B735EF /* Assets.xcassets */; };
+		A72876B620E5143F00B735EF /* Daily Quote Watchkit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A728769720E5143900B735EF /* Daily Quote Watchkit App.app */; };
+		A73D3AFF20EF03A200DA1324 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AF320EF03A100DA1324 /* data.json */; };
+		A73D3B0020EF03A200DA1324 /* img_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AF520EF03A200DA1324 /* img_1.png */; };
+		A73D3B0120EF03A200DA1324 /* img_0.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AF620EF03A200DA1324 /* img_0.png */; };
+		A73D3B0220EF03A200DA1324 /* img_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AF720EF03A200DA1324 /* img_2.png */; };
+		A73D3B0320EF03A200DA1324 /* img_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AF820EF03A200DA1324 /* img_3.png */; };
+		A73D3B0420EF03A200DA1324 /* img_7.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AF920EF03A200DA1324 /* img_7.png */; };
+		A73D3B0520EF03A200DA1324 /* img_6.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AFA20EF03A200DA1324 /* img_6.png */; };
+		A73D3B0620EF03A200DA1324 /* img_4.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AFB20EF03A200DA1324 /* img_4.png */; };
+		A73D3B0720EF03A200DA1324 /* img_5.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AFC20EF03A200DA1324 /* img_5.png */; };
+		A73D3B0820EF03A200DA1324 /* img_8.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AFD20EF03A200DA1324 /* img_8.png */; };
+		A73D3B0920EF03A200DA1324 /* img_9.png in Resources */ = {isa = PBXBuildFile; fileRef = A73D3AFE20EF03A200DA1324 /* img_9.png */; };
 		A74EB38820923E13003D00FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74EB38720923E13003D00FB /* AppDelegate.swift */; };
 		A74EB38A20923E13003D00FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74EB38920923E13003D00FB /* ViewController.swift */; };
 		A74EB38D20923E13003D00FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A74EB38B20923E13003D00FB /* Main.storyboard */; };
@@ -17,11 +37,77 @@
 		A7BEAE2E20A3BDB700DBC742 /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEAE2D20A3BDB700DBC742 /* IAPProduct.swift */; };
 		A7BEAE3020A3BEA200DBC742 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEAE2F20A3BEA200DBC742 /* IAPService.swift */; };
 		A7D8D1662092A0AC00EEBEBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D8D1652092A0AC00EEBEBC /* Images.xcassets */; };
+		A7F7C35B20F7F2BF0056B19D /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F7C35A20F7F2BF0056B19D /* Gif.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A72876A520E5143E00B735EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A74EB37C20923E13003D00FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A72876A220E5143E00B735EF;
+			remoteInfo = "Daily Quote Watchkit App Extension";
+		};
+		A72876B420E5143F00B735EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A74EB37C20923E13003D00FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A728769620E5143900B735EF;
+			remoteInfo = "Daily Quote Watchkit App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A72876BA20E5143F00B735EF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A72876A420E5143E00B735EF /* Daily Quote Watchkit App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A72876BE20E5143F00B735EF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				A72876B620E5143F00B735EF /* Daily Quote Watchkit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1677C782395477462D63FFFA /* Pods-Daily Quote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Quote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote.release.xcconfig"; sourceTree = "<group>"; };
 		728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Quote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A728769720E5143900B735EF /* Daily Quote Watchkit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Quote Watchkit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A728769A20E5143900B735EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A728769C20E5143E00B735EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A728769E20E5143E00B735EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72876A320E5143E00B735EF /* Daily Quote Watchkit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Daily Quote Watchkit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A72876A820E5143E00B735EF /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A72876AA20E5143E00B735EF /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		A72876AC20E5143E00B735EF /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A72876AE20E5143F00B735EF /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		A72876B020E5143F00B735EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A72876B220E5143F00B735EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A72876B320E5143F00B735EF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A73D3AF320EF03A100DA1324 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		A73D3AF520EF03A200DA1324 /* img_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_1.png; sourceTree = "<group>"; };
+		A73D3AF620EF03A200DA1324 /* img_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_0.png; sourceTree = "<group>"; };
+		A73D3AF720EF03A200DA1324 /* img_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_2.png; sourceTree = "<group>"; };
+		A73D3AF820EF03A200DA1324 /* img_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_3.png; sourceTree = "<group>"; };
+		A73D3AF920EF03A200DA1324 /* img_7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_7.png; sourceTree = "<group>"; };
+		A73D3AFA20EF03A200DA1324 /* img_6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_6.png; sourceTree = "<group>"; };
+		A73D3AFB20EF03A200DA1324 /* img_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_4.png; sourceTree = "<group>"; };
+		A73D3AFC20EF03A200DA1324 /* img_5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_5.png; sourceTree = "<group>"; };
+		A73D3AFD20EF03A200DA1324 /* img_8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_8.png; sourceTree = "<group>"; };
+		A73D3AFE20EF03A200DA1324 /* img_9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_9.png; sourceTree = "<group>"; };
 		A74EB38420923E13003D00FB /* Daily Quote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Quote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A74EB38720923E13003D00FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A74EB38920923E13003D00FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,16 +119,31 @@
 		A7BEAE2D20A3BDB700DBC742 /* IAPProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
 		A7BEAE2F20A3BEA200DBC742 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		A7D8D1652092A0AC00EEBEBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A7F7C35A20F7F2BF0056B19D /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 		B76D56D163E171210509AF40 /* Pods-Daily Quote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Quote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A72876A020E5143E00B735EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A74EB38120923E13003D00FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				961D0152B5AE046F6609F843 /* Pods_Daily_Quote.framework in Frameworks */,
 				A7BEAE2C20A3B9EE00DBC742 /* StoreKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF59C0CF13949DEB64F8674C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,11 +159,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A728769820E5143900B735EF /* Daily Quote Watchkit App */ = {
+			isa = PBXGroup;
+			children = (
+				A728769920E5143900B735EF /* Interface.storyboard */,
+				A728769C20E5143E00B735EF /* Assets.xcassets */,
+				A728769E20E5143E00B735EF /* Info.plist */,
+			);
+			path = "Daily Quote Watchkit App";
+			sourceTree = "<group>";
+		};
+		A72876A720E5143E00B735EF /* Daily Quote Watchkit App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A72876A820E5143E00B735EF /* InterfaceController.swift */,
+				A72876AA20E5143E00B735EF /* ExtensionDelegate.swift */,
+				A72876AC20E5143E00B735EF /* NotificationController.swift */,
+				A72876AE20E5143F00B735EF /* ComplicationController.swift */,
+				A72876B020E5143F00B735EF /* Assets.xcassets */,
+				A72876B220E5143F00B735EF /* Info.plist */,
+				A72876B320E5143F00B735EF /* PushNotificationPayload.apns */,
+			);
+			path = "Daily Quote Watchkit App Extension";
+			sourceTree = "<group>";
+		};
+		A73D3AF420EF03A200DA1324 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A73D3AF520EF03A200DA1324 /* img_1.png */,
+				A73D3AF620EF03A200DA1324 /* img_0.png */,
+				A73D3AF720EF03A200DA1324 /* img_2.png */,
+				A73D3AF820EF03A200DA1324 /* img_3.png */,
+				A73D3AF920EF03A200DA1324 /* img_7.png */,
+				A73D3AFA20EF03A200DA1324 /* img_6.png */,
+				A73D3AFB20EF03A200DA1324 /* img_4.png */,
+				A73D3AFC20EF03A200DA1324 /* img_5.png */,
+				A73D3AFD20EF03A200DA1324 /* img_8.png */,
+				A73D3AFE20EF03A200DA1324 /* img_9.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		A74EB37B20923E12003D00FB = {
 			isa = PBXGroup;
 			children = (
 				A74EB399209282D8003D00FB /* Model.xcdatamodeld */,
 				A74EB38620923E13003D00FB /* Daily Quote */,
+				A728769820E5143900B735EF /* Daily Quote Watchkit App */,
+				A72876A720E5143E00B735EF /* Daily Quote Watchkit App Extension */,
 				A74EB38520923E13003D00FB /* Products */,
 				DED1E44F62EAD10B0BFC4D2F /* Pods */,
 				0C0C482A75E8CF1FBB2FD156 /* Frameworks */,
@@ -73,6 +217,8 @@
 			isa = PBXGroup;
 			children = (
 				A74EB38420923E13003D00FB /* Daily Quote.app */,
+				A728769720E5143900B735EF /* Daily Quote Watchkit App.app */,
+				A72876A320E5143E00B735EF /* Daily Quote Watchkit App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,8 +226,11 @@
 		A74EB38620923E13003D00FB /* Daily Quote */ = {
 			isa = PBXGroup;
 			children = (
+				A73D3AF320EF03A100DA1324 /* data.json */,
+				A73D3AF420EF03A200DA1324 /* images */,
 				A74EB38720923E13003D00FB /* AppDelegate.swift */,
 				A74EB38920923E13003D00FB /* ViewController.swift */,
+				A7F7C35A20F7F2BF0056B19D /* Gif.swift */,
 				A74EB38B20923E13003D00FB /* Main.storyboard */,
 				A74EB39020923E18003D00FB /* LaunchScreen.storyboard */,
 				A74EB39320923E18003D00FB /* Info.plist */,
@@ -104,6 +253,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A728769620E5143900B735EF /* Daily Quote Watchkit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A72876BB20E5143F00B735EF /* Build configuration list for PBXNativeTarget "Daily Quote Watchkit App" */;
+			buildPhases = (
+				A728769520E5143900B735EF /* Resources */,
+				A72876BA20E5143F00B735EF /* Embed App Extensions */,
+				DF59C0CF13949DEB64F8674C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A72876A620E5143E00B735EF /* PBXTargetDependency */,
+			);
+			name = "Daily Quote Watchkit App";
+			productName = "Daily Quote Watchkit App";
+			productReference = A728769720E5143900B735EF /* Daily Quote Watchkit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		A72876A220E5143E00B735EF /* Daily Quote Watchkit App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A72876B720E5143F00B735EF /* Build configuration list for PBXNativeTarget "Daily Quote Watchkit App Extension" */;
+			buildPhases = (
+				A728769F20E5143E00B735EF /* Sources */,
+				A72876A020E5143E00B735EF /* Frameworks */,
+				A72876A120E5143E00B735EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Daily Quote Watchkit App Extension";
+			productName = "Daily Quote Watchkit App Extension";
+			productReference = A72876A320E5143E00B735EF /* Daily Quote Watchkit App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		A74EB38320923E13003D00FB /* Daily Quote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A74EB39620923E18003D00FB /* Build configuration list for PBXNativeTarget "Daily Quote" */;
@@ -113,11 +297,12 @@
 				A74EB38120923E13003D00FB /* Frameworks */,
 				A74EB38220923E13003D00FB /* Resources */,
 				B948E8CAE6B864DA66860467 /* [CP] Embed Pods Frameworks */,
-				B6255B00C23323EDC7B54CAA /* [CP] Copy Pods Resources */,
+				A72876BE20E5143F00B735EF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A72876B520E5143F00B735EF /* PBXTargetDependency */,
 			);
 			name = "Daily Quote";
 			productName = "Daily Quote";
@@ -130,10 +315,16 @@
 		A74EB37C20923E13003D00FB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Moustafa Awad";
 				TargetAttributes = {
+					A728769620E5143900B735EF = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					A72876A220E5143E00B735EF = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					A74EB38320923E13003D00FB = {
 						CreatedOnToolsVersion = 9.3;
 						SystemCapabilities = {
@@ -161,39 +352,54 @@
 			projectRoot = "";
 			targets = (
 				A74EB38320923E13003D00FB /* Daily Quote */,
+				A728769620E5143900B735EF /* Daily Quote Watchkit App */,
+				A72876A220E5143E00B735EF /* Daily Quote Watchkit App Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A728769520E5143900B735EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A728769D20E5143E00B735EF /* Assets.xcassets in Resources */,
+				A728769B20E5143900B735EF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A72876A120E5143E00B735EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72876B120E5143F00B735EF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A74EB38220923E13003D00FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A74EB39220923E18003D00FB /* LaunchScreen.storyboard in Resources */,
+				A73D3B0820EF03A200DA1324 /* img_8.png in Resources */,
 				A7D8D1662092A0AC00EEBEBC /* Images.xcassets in Resources */,
+				A73D3B0120EF03A200DA1324 /* img_0.png in Resources */,
+				A73D3B0320EF03A200DA1324 /* img_3.png in Resources */,
 				A74EB38D20923E13003D00FB /* Main.storyboard in Resources */,
+				A73D3B0720EF03A200DA1324 /* img_5.png in Resources */,
+				A73D3B0220EF03A200DA1324 /* img_2.png in Resources */,
+				A73D3B0020EF03A200DA1324 /* img_1.png in Resources */,
+				A73D3AFF20EF03A200DA1324 /* data.json in Resources */,
+				A73D3B0520EF03A200DA1324 /* img_6.png in Resources */,
+				A73D3B0920EF03A200DA1324 /* img_9.png in Resources */,
+				A73D3B0620EF03A200DA1324 /* img_4.png in Resources */,
+				A73D3B0420EF03A200DA1324 /* img_7.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		B6255B00C23323EDC7B54CAA /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B948E8CAE6B864DA66860467 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,10 +408,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FeedKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftGifOrigin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -233,12 +443,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A728769F20E5143E00B735EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A72876AD20E5143F00B735EF /* NotificationController.swift in Sources */,
+				A72876AF20E5143F00B735EF /* ComplicationController.swift in Sources */,
+				A72876AB20E5143E00B735EF /* ExtensionDelegate.swift in Sources */,
+				A72876A920E5143E00B735EF /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A74EB38020923E13003D00FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A74EB38A20923E13003D00FB /* ViewController.swift in Sources */,
 				A7BEAE3020A3BEA200DBC742 /* IAPService.swift in Sources */,
+				A7F7C35B20F7F2BF0056B19D /* Gif.swift in Sources */,
 				A74EB38820923E13003D00FB /* AppDelegate.swift in Sources */,
 				A7BEAE2E20A3BDB700DBC742 /* IAPProduct.swift in Sources */,
 				A74EB39B209282D8003D00FB /* Model.xcdatamodeld in Sources */,
@@ -247,7 +469,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A72876A620E5143E00B735EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A72876A220E5143E00B735EF /* Daily Quote Watchkit App Extension */;
+			targetProxy = A72876A520E5143E00B735EF /* PBXContainerItemProxy */;
+		};
+		A72876B520E5143F00B735EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A728769620E5143900B735EF /* Daily Quote Watchkit App */;
+			targetProxy = A72876B420E5143F00B735EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		A728769920E5143900B735EF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A728769A20E5143900B735EF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		A74EB38B20923E13003D00FB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -267,6 +510,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A72876B820E5143F00B735EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J497DX6ZF8;
+				INFOPLIST_FILE = "Daily Quote Watchkit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Quote.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		A72876B920E5143F00B735EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J497DX6ZF8;
+				INFOPLIST_FILE = "Daily Quote Watchkit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Quote.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		A72876BC20E5143F00B735EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J497DX6ZF8;
+				IBSC_MODULE = Daily_Quote_Watchkit_App_Extension;
+				INFOPLIST_FILE = "Daily Quote Watchkit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Quote.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		A72876BD20E5143F00B735EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J497DX6ZF8;
+				IBSC_MODULE = Daily_Quote_Watchkit_App_Extension;
+				INFOPLIST_FILE = "Daily Quote Watchkit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Quote.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 		A74EB39420923E18003D00FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -318,7 +645,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -372,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -424,6 +751,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A72876B720E5143F00B735EF /* Build configuration list for PBXNativeTarget "Daily Quote Watchkit App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A72876B820E5143F00B735EF /* Debug */,
+				A72876B920E5143F00B735EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A72876BB20E5143F00B735EF /* Build configuration list for PBXNativeTarget "Daily Quote Watchkit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A72876BC20E5143F00B735EF /* Debug */,
+				A72876BD20E5143F00B735EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A74EB37F20923E13003D00FB /* Build configuration list for PBXProject "Daily Quote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

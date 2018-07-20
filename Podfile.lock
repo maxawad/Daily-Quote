@@ -1,12 +1,24 @@
 PODS:
   - FeedKit (6.2.0)
+  - lottie-ios (2.5.0)
+  - SwiftGifOrigin (1.6.1)
 
 DEPENDENCIES:
   - FeedKit (~> 6.0)
+  - lottie-ios
+  - SwiftGifOrigin (~> 1.6.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FeedKit
+    - lottie-ios
+    - SwiftGifOrigin
 
 SPEC CHECKSUMS:
   FeedKit: 48e371d0884b3bc7d87253f5ae3313c91d2a7e72
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
 
-PODFILE CHECKSUM: cfd200eb6149461c19f7112113210acd2d516b5b
+PODFILE CHECKSUM: b2465a254549ef72970fdb540671e1b663ef7eec
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
