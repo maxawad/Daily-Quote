@@ -543,7 +543,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Sutra.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -565,7 +565,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Sutra.watchkitapp.watchkitextension";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -585,7 +585,7 @@
 				IBSC_MODULE = Daily_Quote_Watchkit_App_Extension;
 				INFOPLIST_FILE = "Daily Sutra Watchkit App/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Sutra.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -604,7 +604,7 @@
 				DEVELOPMENT_TEAM = J497DX6ZF8;
 				IBSC_MODULE = Daily_Quote_Watchkit_App_Extension;
 				INFOPLIST_FILE = "Daily Sutra Watchkit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Sutra.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -743,7 +743,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Sutra";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -763,7 +763,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.maxmax2012.Daily-Sutra";
+				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

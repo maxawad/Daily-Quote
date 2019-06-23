@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.maxmax2012.Daily-Sutra</string>
+	<string>com.maxmax2012.dailysutra</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
