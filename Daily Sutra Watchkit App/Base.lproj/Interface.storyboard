@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc" pageOrientation="vertical">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,18 +12,25 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Daily_Quote_Watchkit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Daily_Sutra_Watchkit_App" customModuleProvider="target">
                     <items>
                         <group width="1" alignment="left" id="zdI-Ln-go5">
                             <items>
-                                <label height="118" alignment="left" text="Life ought to be a struggle of desire toward adventures whose nobility  will fertilize the soul.-  Rebeca West" numberOfLines="0" id="bsH-cw-xfI"/>
+                                <label alignment="left" numberOfLines="0" id="bsH-cw-xfI">
+                                    <string key="text">Dhṛtarāṣṭra said: O Sañjaya, after my sons and the sons of Pāṇḍu assembled in the place of pilgrimage at Kurukṣetra, desiring to ﬁght, what did they do? - Bg 1.1</string>
+                                </label>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="Next" id="HMh-Ls-yz6"/>
-                        <button width="1" alignment="left" title="Previous" id="xBR-TB-WX5"/>
+                        <button width="1" alignment="left" title="Next" id="HMh-Ls-yz6">
+                            <connections>
+                                <action selector="NextAction" destination="AgC-eL-Hgc" id="pjS-fx-uY3"/>
+                            </connections>
+                        </button>
                     </items>
                     <connections>
+                        <outlet property="NextOutlet" destination="HMh-Ls-yz6" id="4PP-yj-mJ3"/>
                         <outlet property="QuoteLabelOutlet" destination="bsH-cw-xfI" id="zxE-Sc-DW0"/>
+                        <outlet property="watchGroupOutlet" destination="zdI-Ln-go5" id="3S9-Oz-Pcc"/>
                     </connections>
                 </controller>
             </objects>
@@ -49,14 +56,14 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Daily_Quote_Watchkit_App" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="Daily_Sutra_Watchkit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="502" y="794"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Daily_Quote_Watchkit_App" customModuleProvider="target">
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="Daily_Sutra_Watchkit_App" customModuleProvider="target">
                     <items>
                         <button width="1" alignment="left" title="Button" id="TRX-ek-42F"/>
                     </items>

@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Daily_Quote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Daily_Sutra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,23 +21,46 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg3" translatesAutoresizingMaskIntoConstraints="NO" id="Klz-qW-gv0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O my teacher, behold the great army of the sons of Pāṇḍu, so expertly arranged by your intelligent disciple the son of Drupada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ier-xP-dsu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O my teacher, behold the great army of the sons of Pāṇḍu, so expertly arranged by your intelligent disciple the son of Drupada." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ier-xP-dsu">
                                 <rect key="frame" x="80" y="124" width="215" height="184"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bg 1.3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dS-6e-E1h">
-                                <rect key="frame" x="80" y="328" width="215" height="16"/>
+                                <rect key="frame" x="80" y="318" width="215" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y1-I7-tHz" userLabel="List Button Outlet">
+                                <rect key="frame" x="27" y="62" width="39" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="LhG-Ho-hbf"/>
+                                    <constraint firstAttribute="width" secondItem="6y1-I7-tHz" secondAttribute="height" multiplier="1:1" id="eVb-Is-KCK"/>
+                                    <constraint firstAttribute="width" constant="39" id="gZF-1V-YBm"/>
+                                </constraints>
+                                <state key="normal" image="list"/>
+                                <connections>
+                                    <action selector="gearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Bd-QE-yE2"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qB7-a0-K7P" userLabel="Screen Button">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <action selector="ScreenButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cOq-N2-MJt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsf-9c-T1P">
+                                <rect key="frame" x="305" y="74" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Rk9-nc-9d3"/>
+                                    <constraint firstAttribute="height" constant="40" id="XnA-FX-eR7"/>
+                                </constraints>
+                                <state key="normal" image="alarm-clock"/>
+                                <connections>
+                                    <action selector="alarmButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ie6-Hl-Psy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l8r-Wj-Sse">
@@ -61,30 +84,6 @@
                                     <constraint firstAttribute="height" id="gJU-nh-HQC"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y1-I7-tHz" userLabel="List Button Outlet">
-                                <rect key="frame" x="27" y="62" width="39" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="LhG-Ho-hbf"/>
-                                    <constraint firstAttribute="width" secondItem="6y1-I7-tHz" secondAttribute="height" multiplier="1:1" id="eVb-Is-KCK"/>
-                                    <constraint firstAttribute="width" constant="39" id="gZF-1V-YBm"/>
-                                </constraints>
-                                <state key="normal" image="list"/>
-                                <connections>
-                                    <action selector="gearButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Bd-QE-yE2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsf-9c-T1P">
-                                <rect key="frame" x="309" y="62" width="39" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="39" id="ZBa-Af-X9r"/>
-                                    <constraint firstAttribute="height" constant="39" id="bTq-as-F1Z"/>
-                                    <constraint firstAttribute="width" secondItem="Qsf-9c-T1P" secondAttribute="height" multiplier="1:1" id="dyZ-19-Dnc"/>
-                                </constraints>
-                                <state key="normal" image="alarm-clock"/>
-                                <connections>
-                                    <action selector="alarmButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ie6-Hl-Psy"/>
-                                </connections>
-                            </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lBh-UG-8Pe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,26 +120,25 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6y1-I7-tHz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="5r3-cg-XLw"/>
-                            <constraint firstItem="Qsf-9c-T1P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="9vb-0v-WDj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l8r-Wj-Sse" secondAttribute="trailing" constant="55" id="BSz-KP-S5j"/>
                             <constraint firstItem="ier-xP-dsu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="DQC-sZ-ZRl"/>
-                            <constraint firstItem="gq3-0F-Uqu" firstAttribute="centerX" secondItem="l8r-Wj-Sse" secondAttribute="centerX" id="EwP-Vf-1Li"/>
-                            <constraint firstItem="2dS-6e-E1h" firstAttribute="top" secondItem="ier-xP-dsu" secondAttribute="bottom" constant="20" id="IIH-BV-tht"/>
+                            <constraint firstItem="Qsf-9c-T1P" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="MbS-FS-a3V"/>
                             <constraint firstItem="Klz-qW-gv0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Mig-4M-vlt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2dS-6e-E1h" secondAttribute="trailing" constant="80" id="Phx-Em-fRS"/>
+                            <constraint firstItem="2dS-6e-E1h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="QSO-XT-Bci"/>
+                            <constraint firstItem="2dS-6e-E1h" firstAttribute="top" secondItem="ier-xP-dsu" secondAttribute="bottom" constant="10" id="QbY-vI-uBJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l8r-Wj-Sse" secondAttribute="bottom" constant="30" id="UBc-q7-xSf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ier-xP-dsu" secondAttribute="trailing" constant="80" id="Xki-v5-9IV"/>
                             <constraint firstItem="Klz-qW-gv0" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bUz-ty-eI1"/>
                             <constraint firstItem="Klz-qW-gv0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ccY-28-uw3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qsf-9c-T1P" secondAttribute="trailing" constant="27" id="dAc-FT-sO4"/>
                             <constraint firstItem="ier-xP-dsu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="80" id="epT-Mp-Gse"/>
                             <constraint firstItem="gq3-0F-Uqu" firstAttribute="centerY" secondItem="l8r-Wj-Sse" secondAttribute="centerY" constant="-25" id="fGy-06-yAM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qsf-9c-T1P" secondAttribute="trailing" constant="30" id="h9e-Wq-nig"/>
                             <constraint firstItem="Klz-qW-gv0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="hOB-GT-Eo4"/>
                             <constraint firstItem="6y1-I7-tHz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="18" id="lmj-bL-CjY"/>
                             <constraint firstItem="Klz-qW-gv0" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="mjs-2k-bWA"/>
                             <constraint firstItem="l8r-Wj-Sse" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="ndf-CK-miE"/>
-                            <constraint firstItem="2dS-6e-E1h" firstAttribute="width" secondItem="ier-xP-dsu" secondAttribute="width" id="qz7-aa-fL1"/>
-                            <constraint firstItem="2dS-6e-E1h" firstAttribute="centerX" secondItem="ier-xP-dsu" secondAttribute="centerX" id="rn3-Lv-7z5"/>
-                            <constraint firstItem="l8r-Wj-Sse" firstAttribute="centerX" secondItem="Klz-qW-gv0" secondAttribute="centerX" id="vXD-df-S6s"/>
+                            <constraint firstItem="gq3-0F-Uqu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rke-em-lJn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -169,7 +167,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" restorationIdentifier="QuoteList" id="m0v-Ob-QyS" customClass="test" customModule="Daily_Quote" customModuleProvider="target">
+                <view contentMode="scaleToFill" restorationIdentifier="QuoteList" id="m0v-Ob-QyS" customClass="test" customModule="Daily_Sutra" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
@@ -178,7 +176,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <prototypes>
-                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="QuoteCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuoteCell" rowHeight="156" id="hL3-CF-IbR" customClass="QuoteCell" customModule="Daily_Quote" customModuleProvider="target">
+                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="QuoteCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuoteCell" rowHeight="156" id="hL3-CF-IbR" customClass="QuoteCell" customModule="Daily_Sutra" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="28" width="375" height="156"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hL3-CF-IbR" id="D4T-lr-VIR">
@@ -214,9 +212,8 @@
                                 <outlet property="delegate" destination="m0v-Ob-QyS" id="KKn-Fv-AWs"/>
                             </connections>
                         </tableView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-3K-U3T">
-                            <rect key="frame" x="293" y="35" width="54" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-3K-U3T">
+                            <rect key="frame" x="291" y="35" width="54" height="30"/>
                             <state key="normal" title="Dismiss"/>
                             <connections>
                                 <action selector="dismissList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N5V-j4-4Ce"/>
@@ -224,6 +221,11 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="cIV-zX-ED7" firstAttribute="trailing" secondItem="PCM-3K-U3T" secondAttribute="trailing" constant="30" id="5Oq-L1-uDb"/>
+                        <constraint firstItem="PCM-3K-U3T" firstAttribute="leading" secondItem="cIV-zX-ED7" secondAttribute="leading" constant="291" id="GM7-Tv-CmG"/>
+                        <constraint firstItem="PCM-3K-U3T" firstAttribute="top" secondItem="m0v-Ob-QyS" secondAttribute="top" constant="35" id="YAl-ek-6a0"/>
+                    </constraints>
                     <viewLayoutGuide key="safeArea" id="cIV-zX-ED7"/>
                 </view>
                 <view contentMode="scaleToFill" id="6M4-Jd-Wwh">
@@ -236,9 +238,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="270" height="359"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeF-LG-zHI">
-                                        <rect key="frame" x="30" y="82" width="210" height="162.33333333333337"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qeF-LG-zHI">
+                                        <rect key="frame" x="30" y="82" width="202" height="163"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="163" id="0ca-ZU-XsN"/>
+                                        </constraints>
                                         <string key="text">A daily dose of inspiration and confidence.
 
 Enjoy the enerifying quote of the day. Additionaly, set a notification time to keep updated with the quote of the day.</string>
@@ -258,9 +262,12 @@ Enjoy the enerifying quote of the day. Additionaly, set a notification time to k
                                     </button>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="qeF-LG-zHI" firstAttribute="top" secondItem="I9F-dm-9b5" secondAttribute="top" constant="82" id="3M0-2J-8i2"/>
                                     <constraint firstAttribute="bottom" secondItem="WJD-fF-j4Y" secondAttribute="bottom" constant="28" id="DGC-hP-cEr"/>
+                                    <constraint firstItem="qeF-LG-zHI" firstAttribute="leading" secondItem="I9F-dm-9b5" secondAttribute="leading" constant="30" id="GPO-6E-zlM"/>
                                     <constraint firstItem="WJD-fF-j4Y" firstAttribute="leading" secondItem="I9F-dm-9b5" secondAttribute="leading" constant="45" id="GYS-ui-wNK"/>
-                                    <constraint firstAttribute="trailing" secondItem="WJD-fF-j4Y" secondAttribute="trailing" constant="45" id="LO3-ip-JFh"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qeF-LG-zHI" secondAttribute="trailing" constant="30" id="Gwv-LO-lq3"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="WJD-fF-j4Y" secondAttribute="trailing" constant="45" id="LO3-ip-JFh"/>
                                 </constraints>
                             </view>
                             <blurEffect style="light"/>
@@ -332,7 +339,6 @@ Enjoy the enerifying quote of the day. Additionaly, set a notification time to k
                         <constraint firstItem="Hca-9Q-bfA" firstAttribute="leading" secondItem="Hm3-Lq-fr5" secondAttribute="leading" constant="15" id="A58-27-nK9"/>
                         <constraint firstAttribute="bottom" secondItem="Us8-h1-tMO" secondAttribute="bottom" constant="1" id="E84-cB-CaY"/>
                         <constraint firstItem="Us8-h1-tMO" firstAttribute="centerX" secondItem="JlC-vO-nJH" secondAttribute="centerX" id="Fpb-qT-5pA"/>
-                        <constraint firstItem="Whv-a8-6Ep" firstAttribute="centerX" secondItem="JlC-vO-nJH" secondAttribute="centerX" id="ILv-j1-S8d"/>
                         <constraint firstItem="Hm3-Lq-fr5" firstAttribute="trailing" secondItem="Whv-a8-6Ep" secondAttribute="trailing" constant="30" id="KNH-lc-eUI"/>
                         <constraint firstItem="Hm3-Lq-fr5" firstAttribute="trailing" secondItem="Hca-9Q-bfA" secondAttribute="trailing" constant="15" id="PvS-FL-ZBK"/>
                         <constraint firstItem="6r0-Ah-EhT" firstAttribute="leading" secondItem="Hm3-Lq-fr5" secondAttribute="leading" constant="15" id="V1D-j3-edy"/>
@@ -359,9 +365,8 @@ Enjoy the enerifying quote of the day. Additionaly, set a notification time to k
                             </view>
                             <blurEffect style="light"/>
                         </visualEffectView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show daily quote at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b1-um-b4K">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show daily quote at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2b1-um-b4K">
                             <rect key="frame" x="65" y="49" width="155" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -389,12 +394,14 @@ Enjoy the enerifying quote of the day. Additionaly, set a notification time to k
                         </datePicker>
                     </subviews>
                     <constraints>
-                        <constraint firstItem="qQn-tf-5Ls" firstAttribute="centerX" secondItem="xAu-bF-CSw" secondAttribute="centerX" id="KuD-5S-syF"/>
                         <constraint firstItem="qAG-X8-YZK" firstAttribute="trailing" secondItem="qQn-tf-5Ls" secondAttribute="trailing" constant="30" id="MqI-dD-RAG"/>
+                        <constraint firstItem="qAG-X8-YZK" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="2b1-um-b4K" secondAttribute="trailing" constant="64" id="Yz6-i1-gBT"/>
                         <constraint firstItem="qQn-tf-5Ls" firstAttribute="leading" secondItem="qAG-X8-YZK" secondAttribute="leading" constant="30" id="ZF9-yL-g2i"/>
                         <constraint firstItem="oUb-of-9CM" firstAttribute="centerY" secondItem="xAu-bF-CSw" secondAttribute="centerY" id="bqz-O3-WN9"/>
+                        <constraint firstItem="2b1-um-b4K" firstAttribute="leading" secondItem="qAG-X8-YZK" secondAttribute="leading" constant="65" id="gD6-N3-S8s"/>
                         <constraint firstItem="oUb-of-9CM" firstAttribute="centerX" secondItem="xAu-bF-CSw" secondAttribute="centerX" id="mLm-US-haA"/>
                         <constraint firstItem="qAG-X8-YZK" firstAttribute="bottom" secondItem="qQn-tf-5Ls" secondAttribute="bottom" constant="30" id="qlZ-1U-rgp"/>
+                        <constraint firstItem="2b1-um-b4K" firstAttribute="top" secondItem="qAG-X8-YZK" secondAttribute="top" constant="5" id="tEI-Rw-KgQ"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="qAG-X8-YZK"/>
                 </view>

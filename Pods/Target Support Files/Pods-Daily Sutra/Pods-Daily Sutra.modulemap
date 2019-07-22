@@ -1,0 +1,6 @@
+framework module Pods_Daily_Sutra {
+  umbrella header "Pods-Daily Sutra-umbrella.h"
+
+  export *
+  module * { export * }
+}

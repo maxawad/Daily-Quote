@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Daily_QuoteVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Daily_QuoteVersionString[];
+FOUNDATION_EXPORT double Pods_Daily_SutraVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Daily_SutraVersionString[];
 

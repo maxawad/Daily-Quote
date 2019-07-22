@@ -207,7 +207,7 @@ class ViewController: UIViewController {
         counter = Int.random(in: 0 ..< testData.count)
         let item = testData[counter]
         let author:String = (item["where"])!
-        var quoting = (item["quote"])!
+        let quoting = (item["quote"])!
         let quote: String = quoting
         DispatchQueue.main.async {
             // ..and update the UI
@@ -259,7 +259,7 @@ class ViewController: UIViewController {
         counter = appDelegate.counter
         let item = testData[counter]
         let author:String = (item["where"])!
-        var quoting = (item["quote"])!
+        let quoting = (item["quote"])!
         let quote: String = quoting
         DispatchQueue.main.async {
             // ..and update the UI
@@ -435,5 +435,9 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var ImageViewOutlet: UIImageView!
     
+//    Receiving quotes from watch
+//    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+//        let receivedGlobal = applicationContext["my_global"] as? TypeOfTheGlobal
+//    }
 }
 

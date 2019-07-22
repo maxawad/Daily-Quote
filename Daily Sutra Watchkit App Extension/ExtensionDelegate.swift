@@ -1,6 +1,6 @@
 //
 //  ExtensionDelegate.swift
-//  Daily Quote Watchkit App Extension
+//  Daily Sutra Watchkit App Extension
 //
 //  Created by Moustafa Awad on 6/28/18.
 //  Copyright © 2018 Moustafa Awad. All rights reserved.

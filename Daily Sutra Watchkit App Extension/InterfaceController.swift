@@ -16,6 +16,23 @@ class InterfaceController: WKInterfaceController {
     // MARK: - Outlets
     
     @IBOutlet var QuoteLabelOutlet: WKInterfaceLabel!
+    @IBOutlet var NextOutlet: WKInterfaceButton!
+    @IBOutlet var watchGroupOutlet: WKInterfaceGroup!
+    
+    @IBAction func NextAction() {
+        newQuote()
+    }
+    
+    func newQuote() {
+        let counter = Int.random(in: 0 ..< watchData.count)
+        let quote = watchData[counter]["quote"]! + " - " + watchData[counter]["where"]!
+        let session = WCSession.default
+        QuoteLabelOutlet.setText(quote)
+        if session.activationState == .activated {
+            try! session.updateApplicationContext(["quote" : quote])
+            scroll(to: watchGroupOutlet, at: .top, animated: true)
+        }
+    }
     
     
     override func awake(withContext context: Any?) {
@@ -29,6 +46,7 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        newQuote()
     }
     
     override func didDeactivate() {

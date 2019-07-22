@@ -113,7 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateInfo, repeats: true)
         
         // Create the request object.
-        let request = UNNotificationRequest(identifier: "DailyQuote", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "Daily Sutra", content: content, trigger: trigger)
         
         // Schedule the request.
         let center = UNUserNotificationCenter.current()

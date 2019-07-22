@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		961D0152B5AE046F6609F843 /* Pods_Daily_Quote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */; };
+		72C9315E972A971F5749198B /* Pods_Daily_Sutra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 904B595BFFACE788717B6E02 /* Pods_Daily_Sutra.framework */; };
 		A728769B20E5143900B735EF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A728769920E5143900B735EF /* Interface.storyboard */; };
 		A728769D20E5143E00B735EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A728769C20E5143E00B735EF /* Assets.xcassets */; };
 		A72876A420E5143E00B735EF /* Daily Sutra Watchkit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A72876A320E5143E00B735EF /* Daily Sutra Watchkit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -38,6 +38,7 @@
 		A76D82C0226B59AE00A0A01D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76D82BE226B59AE00A0A01D /* Images.xcassets */; };
 		A76D82C1226B59AE00A0A01D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76D82BE226B59AE00A0A01D /* Images.xcassets */; };
 		A77B1EB222AF1001002ACA5A /* data.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77B1EB122AF1001002ACA5A /* data.swift */; };
+		A7AEC71D22D9253E00040BC2 /* watchdata.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AEC71C22D9253E00040BC2 /* watchdata.swift */; };
 		A7BEAE2C20A3B9EE00DBC742 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7BEAE2B20A3B9EE00DBC742 /* StoreKit.framework */; };
 		A7BEAE2E20A3BDB700DBC742 /* IAPProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEAE2D20A3BDB700DBC742 /* IAPProduct.swift */; };
 		A7BEAE3020A3BEA200DBC742 /* IAPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BEAE2F20A3BEA200DBC742 /* IAPService.swift */; };
@@ -87,8 +88,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1677C782395477462D63FFFA /* Pods-Daily Quote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Quote.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote.release.xcconfig"; sourceTree = "<group>"; };
-		728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Quote.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0092BD10A6A21CF7B42C1B73 /* Pods-Daily Sutra.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Sutra.release.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Sutra/Pods-Daily Sutra.release.xcconfig"; sourceTree = "<group>"; };
+		904B595BFFACE788717B6E02 /* Pods_Daily_Sutra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Daily_Sutra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A66B95141B527D82F7C4C024 /* Pods-Daily Sutra.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Sutra.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Sutra/Pods-Daily Sutra.debug.xcconfig"; sourceTree = "<group>"; };
 		A728769720E5143900B735EF /* Daily Sutra Watchkit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Daily Sutra Watchkit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A728769A20E5143900B735EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		A728769C20E5143E00B735EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,11 +124,11 @@
 		A75E07BD22B841010038A6FF /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		A76D82BE226B59AE00A0A01D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A77B1EB122AF1001002ACA5A /* data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data.swift; sourceTree = "<group>"; };
+		A7AEC71C22D9253E00040BC2 /* watchdata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchdata.swift; sourceTree = "<group>"; };
 		A7BEAE2B20A3B9EE00DBC742 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A7BEAE2D20A3BDB700DBC742 /* IAPProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPProduct.swift; sourceTree = "<group>"; };
 		A7BEAE2F20A3BEA200DBC742 /* IAPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPService.swift; sourceTree = "<group>"; };
 		A7F7C35A20F7F2BF0056B19D /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
-		B76D56D163E171210509AF40 /* Pods-Daily Quote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Daily Quote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +143,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				961D0152B5AE046F6609F843 /* Pods_Daily_Quote.framework in Frameworks */,
 				A7BEAE2C20A3B9EE00DBC742 /* StoreKit.framework in Frameworks */,
+				72C9315E972A971F5749198B /* Pods_Daily_Sutra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,9 +162,18 @@
 			isa = PBXGroup;
 			children = (
 				A7BEAE2B20A3B9EE00DBC742 /* StoreKit.framework */,
-				728D7CC308614EFFECF20822 /* Pods_Daily_Quote.framework */,
+				904B595BFFACE788717B6E02 /* Pods_Daily_Sutra.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		65831AEF708D77098262E50F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A66B95141B527D82F7C4C024 /* Pods-Daily Sutra.debug.xcconfig */,
+				0092BD10A6A21CF7B42C1B73 /* Pods-Daily Sutra.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A728769820E5143900B735EF /* Daily Sutra Watchkit App */ = {
@@ -185,6 +196,7 @@
 				A72876B020E5143F00B735EF /* Assets.xcassets */,
 				A72876B220E5143F00B735EF /* Info.plist */,
 				A72876B320E5143F00B735EF /* PushNotificationPayload.apns */,
+				A7AEC71C22D9253E00040BC2 /* watchdata.swift */,
 			);
 			path = "Daily Sutra Watchkit App Extension";
 			sourceTree = "<group>";
@@ -214,8 +226,8 @@
 				A728769820E5143900B735EF /* Daily Sutra Watchkit App */,
 				A72876A720E5143E00B735EF /* Daily Sutra Watchkit App Extension */,
 				A74EB38520923E13003D00FB /* Products */,
-				DED1E44F62EAD10B0BFC4D2F /* Pods */,
 				0C0C482A75E8CF1FBB2FD156 /* Frameworks */,
+				65831AEF708D77098262E50F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -255,15 +267,6 @@
 				A75E07BB22B8408F0038A6FF /* QuoteCell.swift */,
 			);
 			path = TablewViewCells;
-			sourceTree = "<group>";
-		};
-		DED1E44F62EAD10B0BFC4D2F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B76D56D163E171210509AF40 /* Pods-Daily Quote.debug.xcconfig */,
-				1677C782395477462D63FFFA /* Pods-Daily Quote.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,7 +426,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Daily Sutra/Pods-Daily Sutra-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FeedKit/FeedKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftGifOrigin/SwiftGifOrigin.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
@@ -436,7 +439,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Quote/Pods-Daily Quote-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Daily Sutra/Pods-Daily Sutra-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CA1FD81730F576C10969621D /* [CP] Check Pods Manifest.lock */ = {
@@ -450,7 +453,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Daily Quote-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Daily Sutra-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -465,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A72876AD20E5143F00B735EF /* NotificationController.swift in Sources */,
+				A7AEC71D22D9253E00040BC2 /* watchdata.swift in Sources */,
 				A72876AF20E5143F00B735EF /* ComplicationController.swift in Sources */,
 				A72876AB20E5143E00B735EF /* ExtensionDelegate.swift in Sources */,
 				A72876A920E5143E00B735EF /* InterfaceController.swift in Sources */,
@@ -582,13 +586,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J497DX6ZF8;
-				IBSC_MODULE = Daily_Quote_Watchkit_App_Extension;
+				IBSC_MODULE = Daily_Sutra_Watchkit_App_Extension;
 				INFOPLIST_FILE = "Daily Sutra Watchkit App/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SRCROOT = "/Users/moustafaawad/Github/Daily-Quote";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
@@ -602,12 +607,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J497DX6ZF8;
-				IBSC_MODULE = Daily_Quote_Watchkit_App_Extension;
+				IBSC_MODULE = Daily_Sutra_Watchkit_App_Extension;
 				INFOPLIST_FILE = "Daily Sutra Watchkit App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SRCROOT = "/Users/moustafaawad/Github/Daily-Quote";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.2;
@@ -732,7 +738,7 @@
 		};
 		A74EB39720923E18003D00FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B76D56D163E171210509AF40 /* Pods-Daily Quote.debug.xcconfig */;
+			baseConfigurationReference = A66B95141B527D82F7C4C024 /* Pods-Daily Sutra.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -745,6 +751,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SRCROOT = "/Users/moustafaawad/Github/Daily-Quote";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -752,7 +759,7 @@
 		};
 		A74EB39820923E18003D00FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1677C782395477462D63FFFA /* Pods-Daily Quote.release.xcconfig */;
+			baseConfigurationReference = 0092BD10A6A21CF7B42C1B73 /* Pods-Daily Sutra.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -765,6 +772,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxmax2012.dailysutra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SRCROOT = "/Users/moustafaawad/Github/Daily-Quote";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
